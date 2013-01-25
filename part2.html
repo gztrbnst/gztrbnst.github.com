@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Зашифрование и расшифрование</title>
+<script language=javaScript>document.onselectstart=new Function("return false");
+document.ondragstart=new Function("return false");</script>
+<style>
+   a {
+    color: #FFFFFF; /* Цвет обычной ссылки */ 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+   }
+   a:visited {
+    color: #FFFFFF; /* Цвет посещённой ссылки */
+   } 
+   a:hover {
+    color: #FFCC99; /* Цвет ссылки при наведении на нее курсора мыши */  
+   }
+  </style>
+</head>
+<body  bgcolor="#333333">
+<table width="100%">
+<tr><td width="25%" valign="top">
+<font face="verdana, tahoma" size="2" color="#FFFFFF">
+<ul><h4><a href="part0.html">Содержание</a></h4></ul>
+<ol>
+<li><a href="part1.html">Цели шифрования</a></li>
+<li><font color="#FF6600">Зашифрование и расшифрование</font><br>
+<ol type="a">
+<li><a href="part2a.html">Криптостойкость шифра</a><br>
+<ol type="i">
+<li><a href="part2ai.html">Абсолютно стойкие системы</a></li>
+<li><a href="part2aii.html">Достаточно стойкие системы</a></li>
+</ol>
+</li>
+</ol></li>
+<li><a href="part3.html">Методы шифрования</a><br>
+<ol type="a">
+<li><a href="part3a.html">Симметричное шифрование</a></li>
+<li><a href="part3b.html">Асимметричное шифрование<br> (с открытым ключом)</a></li>
+</ol></li>
+<li><a href="part4.html">Управление ключами</a><br>
+<ol type="a">
+<li><a href="part4a.html">Цели управления ключами</a></li>
+</ol></li>
+<li><a href="part5.html">Правовые нормы</a></li>
+<li><a href="part6.html">Литература</a></li>
+<li><a href="part7.html">Ссылки</a></li>
+</ol>
+</font></td><td valign="top">
+<font face="verdana, tahoma" size="2" color="#FFFFFF">
+<div align="justify">
+<p>Как было сказано, шифрование состоит из двух взаимно обратных процессов: зашифрование и расшифрование. Оба этих процесса на абстрактном уровне представимы математическими функциями, к которым предъявляются определенные требования. Математически, данные, используемые в шифровании, представимы в виде множеств над которыми построены данные функции. Иными словами, пусть существуют два множества, представляющее данные — <font color="#FF6600"><b>M</b></font>, и <font color="#FF6600"><b>C</b></font>; и каждая из двух функций(шифрующая и расшифровывающая) является отображением одного из этих множеств в другое.
+<ul>
+<li>Шифрующая функция: <font color="#FF6600"><b>E:M&rarr;C</b></font> </li>
+<li>Расшифровывающая функция: <font color="#FF6600"><b>D:C&rarr;M</b></font></li> 
+</ul>
+<p>Элементы этих множеств —  и  являются аргументами соответствующих функций. Так же, в эти функции уже включено понятие ключа. То есть тот необходимый ключ для шифрования или расшифрования является частью функции. Это позволяет рассматривать процессы шифрования абстрактно, вне зависимости от структуры используемых ключей. Хотя, в общем случае, для каждой из этих функций аргументами являются данные и вводимый ключ.
+<ul type="none">
+<li><font color="#FF6600"><b>E<sub>&kappa;1</sub>(m)=c</b></font></li>
+<li><font color="#FF6600"><b>D<sub>&kappa;2</sub>(c)=m</b></font></li>
+</ul>
+<p>Если для шифрования и расшифрования используется один и тот же ключ <font color="#FF6600"><b>K=K<sub>1</sub>=K<sub>2</sub></b></font>, то такой алгоритм относят к симметричным. Если же из ключа шифрования алгоритмически сложно получить ключ расшифрования, то алгоритм относят к асимметричным, то есть к алгоритмам с открытым ключом.
+<ul><li>Для применения в целях шифрования эти функции, в первую очередь, должны быть взаимно обратными. <font color="#FF6600"><b>D=E<sup>-1</sup></b></font><br>
+<font color="#FF6600"><b>D<sub>&kappa;2</sub>(E<sub>&kappa;1</sub>(m))=m</b></font><br>
+<font color="#FF6600"><b>E<sub>&kappa;1</sub>(D<sub>&kappa;2</sub>(c))=c</b></font>
+<li>Важной характеристикой шифрующей функции <font color="#FF6600"><b>E</b></font> является ее <font color="#FF6600"><b>криптостойкость</b></font>. Косвенной оценкой криптостойкости является оценка взаимной информации между открытым текстом и шифротекстом, которая должна стремиться к нулю.
+</ul></div>
+</font>
+</td><td width="15%" valign="top" align="right"><font face="verdana, tahoma" size="2" color="#FFFFFF"><a href="index.html"><ul>На титульный лист</ul></a></font></td></tr>
+</table>
+</body>
+</html>

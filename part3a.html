@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Симметричное шифрование</title>
+<script language=javaScript>document.onselectstart=new Function("return false");
+document.ondragstart=new Function("return false");</script>
+<style>
+   a {
+    color: #FFFFFF; /* Цвет обычной ссылки */ 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+   }
+   a:visited {
+    color: #FFFFFF; /* Цвет посещённой ссылки */
+   } 
+   a:hover {
+    color: #FFCC99; /* Цвет ссылки при наведении на нее курсора мыши */  
+   }
+  </style>
+</head>
+<body  bgcolor="#333333">
+<table width="100%">
+<tr><td width="25%" valign="top">
+<font face="verdana, tahoma" size="2" color="#FFFFFF">
+<ul><h4><a href="part0.html">Содержание</a></h4></ul>
+<ol>
+<li><a href="part1.html">Цели шифрования</a></li>
+<li><a href="part2.html">Зашифрование и расшифрование</a><br>
+<ol type="a">
+<li><a href="part2a.html">Криптостойкость шифра</a><br>
+<ol type="i">
+<li><a href="part2ai.html">Абсолютно стойкие системы</a></li>
+<li><a href="part2aii.html">Достаточно стойкие системы</a></li>
+</ol>
+</li>
+</ol></li>
+<li><a href="part3.html">Методы шифрования</a><br>
+<ol type="a">
+<li><font color="#FF6600">Симметричное шифрование</font></li>
+<li><a href="part3b.html">Асимметричное шифрование<br> (с открытым ключом)</a></li>
+</ol></li>
+<li><a href="part4.html">Управление ключами</a><br>
+<ol type="a">
+<li><a href="part4a.html">Цели управления ключами</a></li>
+</ol></li>
+<li><a href="part5.html">Правовые нормы</a></li>
+<li><a href="part6.html">Литература</a></li>
+<li><a href="part7.html">Ссылки</a></li>
+</ol>
+</font></td><td valign="top">
+<font face="verdana, tahoma" size="2" color="#FFFFFF">
+<div align="justify">
+<p>В симметричных криптосистемах для шифрования и расшифрования используется один и тот же ключ. Отсюда название — <font color="#FF6600"><i>симметричные</i></font>. Алгоритм и ключ выбирается заранее и известен обеим сторонам. Сохранение ключа в секретности является важной задачей для установления и поддержки защищенного канала связи. В связи этим, возникает проблема начальной передачи ключа(синхронизации ключей). Кроме того существуют методы криптоатак, позволяющие так или иначе дешифровать информацию не имея ключа или же с помощью его перехвата на этапе согласования. В целом эти моменты являются проблемой криптостойкости конкретного алгоритма шифрования и являются аргументом при выборе конкретного алгоритма.
+<table cellpadding="0" cellspacing="0" border="1" bordercolor="#FFFFFF"><tr><td><img src="pictures/part3a_1.jpg" alt="Симметричное шифрование" title="Симметричное шифрование"></td></tr></table>
+<p>Симметричные, а конкретнее, алфавитные алгоритмы шифрования были одними из первых алгоритмов.[20] Позднее было изобретено асимметричное шифрование, в котором ключи у собеседников разные.[21]
+<p><font color="#FF6600"><b>Схема реализации</b></font>
+<ul><font color="#FF6600"><i>Задача. Есть два собеседника — Алиса и Боб, они хотят обмениваться конфиденциальной информацией.</i></font>
+</ul>
+<ul><li>Генерация ключа.<br>
+Боб(или Алиса) выбирает ключ шифрования <font color="#FF6600"><b>d</b></font> и алгоритм <font color="#FF6600"><b>E,D</b></font>(функции шифрования и расшифрования), затем посылает эту информацию Алисе(Бобу).
+<li>Шифрование и передача сообщения.<br>
+Алиса шифрует информацию с использованием полученного ключа <font color="#FF6600"><b>d</b></font>.<br>
+<font color="#FF6600"><b>E(m,d)=c</b></font><br>
+И передает Бобу полученный шифротекст <font color="#FF6600"><b>c</b></font>. То же самое делает Боб, если хочет отправить Алисе сообщение.
+<li>Расшифрование сообщения.<br>
+Боб(Алиса), с помощью того же ключа <font color="#FF6600"><b>d</b></font>, расшифровывает шифротекст <font color="#FF6600"><b>c</b></font>.<br>
+<font color="#FF6600"><b>D(c,d)=m</b></font><br>
+</ul>
+<p>Недостатками симметричного шифрования является проблема передачи ключа собеседнику и невозможность установить подлинность или авторство текста. Поэтому, например, в основе технологии цифровой подписи лежат асимметричные схемы.
+</div>
+</font>
+</td><td width="15%" valign="top" align="right"><font face="verdana, tahoma" size="2" color="#FFFFFF"><a href="index.html"><ul>На титульный лист</ul></a></font></td></tr>
+</table>
+</body>
+</html>

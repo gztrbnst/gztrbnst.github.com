@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Достаточно стойкие системы</title>
+<script language="javaScript" type="text/javascript">document.onselectstart=new Function("return false");
+document.ondragstart=new Function("return false");</script>
+<style>
+   a {
+    color: #FFFFFF; /* Цвет обычной ссылки */ 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+   }
+   a:visited {
+    color: #FFFFFF; /* Цвет посещённой ссылки */
+   } 
+   a:hover {
+    color: #FFCC99; /* Цвет ссылки при наведении на нее курсора мыши */  
+   }
+  </style>
+</head>
+<body  bgcolor="#333333">
+<table width="100%">
+<tr><td width="25%" valign="top">
+<font face="verdana, tahoma" size="2" color="#FFFFFF">
+<ul><h4><a href="part0.html">Содержание</a></h4></ul>
+<ol>
+<li><a href="part1.html">Цели шифрования</a></li>
+<li><a href="part2.html">Зашифрование и расшифрование</a><br>
+<ol type="a">
+<li><a href="part2a.html">Криптостойкость шифра</a><br>
+<ol type="i">
+<li><a href="part2ai.html">Абсолютно стойкие системы</a></li>
+<li><font color="#FF6600">Достаточно стойкие системы</font></li>
+</ol>
+</li>
+</ol></li>
+<li><a href="part3.html">Методы шифрования</a><br>
+<ol type="a">
+<li><a href="part3a.html">Симметричное шифрование</a></li>
+<li><a href="part3b.html">Асимметричное шифрование<br> (с открытым ключом)</a></li>
+</ol></li>
+<li><a href="part4.html">Управление ключами</a><br>
+<ol type="a">
+<li><a href="part4a.html">Цели управления ключами</a></li>
+</ol></li>
+<li><a href="part5.html">Правовые нормы</a></li>
+<li><a href="part6.html">Литература</a></li>
+<li><a href="part7.html">Ссылки</a></li>
+</ol>
+</font></td><td valign="top"><font face="verdana, tahoma" size="2" color="#FFFFFF">
+		<div align="justify">
+<p>В связи с трудностью примения абсолютно стойких систем повсеместно, более распространенными являются, так называемые, <font color="#FF6600"><b>достаточно стойкие системы</b></font>. Эти системы не обеспечивают равенство энтроппий и, как следствие, вместре с зашифрованным сообщением передают некоторую информацию об открытом тексте.
+<ul type="none"><li><font color="#FF6600"><b>&exist;c<sub>k</sub>&isin;C:H(M)>H(M|c<sub>k</sub>)&rArr;I>0</b></font>
+</ul>
+<p>Их криптостойкость <font color="#FF6600"><b>зависит</b></font> от того, какими вычислительными возможностями обладает криптоаналитик. Иными словами, шифротекст взламывается, если криптоаналитик обладает достаточными ресурсами, такими как время и количество перехваченных сообщений. Практическая стойкость таких систем основана на их вычислительной сложности и оценивается исключительно на определенный момент времени с двух позиций:
+<ul><li>вычислительная сложность полного перебора для данной системы
+<li>известные на данный момент слабости (уязвимости) системы и их влияние на вычислительную сложность.
+</ul>
+<p>Добиться высокого уровня практической стойкости алгоритма можно двумя подходами:
+<ol><li>Изучить методы, которыми пользуется злоумышленник и попытаться их изучить на используемой системе.
+<li>Составить шифр таким образом, что бы его сложность была эквивалентно сложности известной задачи, для решения которой требуется большой объем вычислительных работ.
+</ol>
+		</div>
+		</font></td><td width="15%" valign="top" align="right"><font face="verdana, tahoma" size="2" color="#FFFFFF"><a href="index.html"><ul>На титульный лист</ul></a></font></td></tr>
+	</tr>
+</table>
+</body>
+</html>
